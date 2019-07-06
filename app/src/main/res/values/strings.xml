@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Android-Kotlin-Retrofit</string>
+
+    <string name="user_id">user_id</string>
+    <string name="sample_text">Sample Text</string>
 </resources>

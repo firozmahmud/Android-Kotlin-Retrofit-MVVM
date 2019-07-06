@@ -12,7 +12,7 @@ import com.example.android_kotlin_retrofit.R
 import com.example.android_kotlin_retrofit.listener.ItemClick
 import com.example.android_kotlin_retrofit.model.Users
 
-class UserAdapter(private val context: Context, private val users: List<Users>) :
+class UserAdapter(private val context: Context, private val users: MutableList<Users>) :
     RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
     private val TAG = "UserAdapter"
@@ -31,10 +31,10 @@ class UserAdapter(private val context: Context, private val users: List<Users>) 
         holder.userPhoto?.let { Glide.with(context).load(users[position].avatarUrl).into(it) }
 
         holder.itemView.setOnClickListener {
-            itemClick?.itemClick(position)
+            itemClick?.itemClick(users.get(position))
         }
         holder.itemView.setOnLongClickListener {
-            itemClick?.itemLongClick(position)
+            itemClick?.itemLongClick(users.get(position))
             return@setOnLongClickListener true
         }
     }
