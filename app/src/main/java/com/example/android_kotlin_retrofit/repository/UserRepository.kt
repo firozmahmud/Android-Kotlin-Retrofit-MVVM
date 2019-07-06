@@ -27,7 +27,7 @@ class UserRepository {
                     if (response.isSuccessful) {
                         usersLiveData?.setValue(response.body())
                     } else {
-                        Log.e(TAG, "Response Error : " + response.errorBody()!!)
+                        Log.e(TAG, "Response Error : " + response?.errorBody())
                     }
                 }
 
