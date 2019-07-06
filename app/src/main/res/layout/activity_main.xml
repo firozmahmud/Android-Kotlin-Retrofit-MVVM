@@ -9,6 +9,7 @@
         android:gravity="center"
         tools:context=".view.MainActivity">
 
+<include android:id="@+id/toolbar" layout="@layout/toolbar"/>
 
     <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"

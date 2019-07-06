@@ -1,5 +1,7 @@
 package com.example.android_kotlin_retrofit.common
 
+import android.app.ActionBar
+import android.app.Activity
 import android.content.Context
 import android.widget.Toast
 

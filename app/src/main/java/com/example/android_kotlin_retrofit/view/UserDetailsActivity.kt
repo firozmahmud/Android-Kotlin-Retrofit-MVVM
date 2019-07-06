@@ -9,6 +9,7 @@ import com.bumptech.glide.Glide
 import com.example.android_kotlin_retrofit.R
 import com.example.android_kotlin_retrofit.viewmodel.UserViewModel
 import kotlinx.android.synthetic.main.activity_user_details.*
+import kotlinx.android.synthetic.main.toolbar.*
 
 class UserDetailsActivity : AppCompatActivity() {
 
@@ -20,12 +21,20 @@ class UserDetailsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_user_details)
 
         initObjects()
+        initListener()
         loadData()
     }
 
     private fun initObjects() {
         userId = intent.getStringExtra(getString(R.string.user_id))
         viewModel = ViewModelProviders.of(this).get(UserViewModel::class.java)
+    }
+
+
+    private fun initListener() {
+        backBtn.setOnClickListener {
+            finish()
+        }
     }
 
     private fun loadData() {
@@ -38,11 +47,4 @@ class UserDetailsActivity : AppCompatActivity() {
         })
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home) {
-            finish()
-            return true
-        }
-        return super.onOptionsItemSelected(item)
-    }
 }

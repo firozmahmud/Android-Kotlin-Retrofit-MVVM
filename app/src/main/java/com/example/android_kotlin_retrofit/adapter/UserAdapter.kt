@@ -34,7 +34,7 @@ class UserAdapter(private val context: Context, private val users: MutableList<U
             itemClick?.itemClick(users.get(position))
         }
         holder.itemView.setOnLongClickListener {
-            itemClick?.itemLongClick(users.get(position))
+            itemClick?.itemLongClick(users.get(position) , holder.itemView)
             return@setOnLongClickListener true
         }
     }
