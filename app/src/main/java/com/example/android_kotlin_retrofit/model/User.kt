@@ -1,9 +1,9 @@
-package com.example.android_kotlin_retrofit.model.pojo_class
+package com.example.android_kotlin_retrofit.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class Users {
+class User {
     @SerializedName("login")
     @Expose
     var login: String? = null
@@ -58,4 +58,43 @@ class Users {
     @SerializedName("site_admin")
     @Expose
     var siteAdmin: Boolean? = null
+    @SerializedName("name")
+    @Expose
+    var name: String? = null
+    @SerializedName("company")
+    @Expose
+    var company: Any? = null
+    @SerializedName("blog")
+    @Expose
+    var blog: String? = null
+    @SerializedName("location")
+    @Expose
+    var location: String? = null
+    @SerializedName("email")
+    @Expose
+    var email: Any? = null
+    @SerializedName("hireable")
+    @Expose
+    var hireable: Boolean? = null
+    @SerializedName("bio")
+    @Expose
+    var bio: String? = null
+    @SerializedName("public_repos")
+    @Expose
+    var publicRepos: Int? = null
+    @SerializedName("public_gists")
+    @Expose
+    var publicGists: Int? = null
+    @SerializedName("followers")
+    @Expose
+    var followers: Int? = null
+    @SerializedName("following")
+    @Expose
+    var following: Int? = null
+    @SerializedName("created_at")
+    @Expose
+    var createdAt: String? = null
+    @SerializedName("updated_at")
+    @Expose
+    var updatedAt: String? = null
 }
